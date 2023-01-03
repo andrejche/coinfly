@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 :root {
   --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
 }
@@ -7,10 +9,8 @@ html {
 }
 
 body {
-  font-family: var(--font-sans);
+  font-family: 'Raleway', sans-serif;
   text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   background-color: hsla(0, 0%, 0%, 1);
   background-image:
     radial-gradient(at 100% 100%, hsla(240, 100%, 18%, 0.5) 0px, transparent 50%),
@@ -31,6 +31,16 @@ body {
   filter: none;
   font-size: 20px;
 }
+
+.navbar-toggler .line {
+  width: 100%;
+  float: left;
+  height: 2px;
+  background-color: #fff;
+  margin-top: 3px;
+  margin-bottom: 6px;
+}
+
 
 .navbar-collapse {
   justify-content: right;
@@ -66,13 +76,18 @@ input {
   font-size: 100px;
 }
 
-#text {
+.text {
+  color: #fff;
   text-shadow: 0 0 70px #fff, 0 0 0px #fff;
+  font-size:4vw
 }
 
-p {
-  -webkit-text-fill-color: transparent;
+.text2 {
+  color: #b6b6b6;
+  text-shadow: 0 0 70px #e9e9e9, 0 0 0px #fff;
+  font-size:2vw
 }
+
 
 #rw {
   color: #888;
@@ -84,4 +99,35 @@ p {
 
 #cs {
   font-size: 80px;
+}
+
+.card-container {
+  display: flex;
+  white-space: nowrap;
+  overflow-x: scroll;
+}
+
+.card-set {
+  width: 1000px; /* Set this to the width of all the cards combined */
+}
+
+.card {
+   height: 200px;
+  width: 300px;
+  flex-shrink: 0;
+  margin-left: 100px;
+}
+@media screen and (max-width: 1400px) {
+  .text {
+    font-size:10vw
+  }
+  .text2 {
+      font-size:5vw
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .text {
+    font-size:14vw
+  }
 }
