@@ -7,16 +7,12 @@
 body {
   font-family: 'Raleway', sans-serif;
   background-color: hsla(0, 0%, 0%, 1);
-  background-image:
-    radial-gradient(at 100% 100%, hsla(240, 100%, 18%, 0.5) 0px, transparent 50%),
-    radial-gradient(at 0% 0%, hsla(343, 0%, 0%, 0.5) 0px, transparent 50%);
-  height: 100%;
+  margin-bottom: 60px;
 }
 
 
 #nav-transparent {
   fill: red;
-
   border-bottom: 1px solid #888;
 }
 
@@ -43,20 +39,14 @@ body {
 
 .btn {
   text-decoration: none;
-  padding: 20px 50px;
   font-size: 1.25rem;
-  position: relative;
-  margin: 32px;
   border: 3px solid #FFF;
   color: #FFF;
 }
 
 .btn:hover {
   text-decoration: none;
-  padding: 20px 50px;
   font-size: 1.25rem;
-  position: relative;
-  margin: 32px;
   border: 3px solid #FFF;
   color: #FFF;
 }
@@ -82,16 +72,15 @@ input {
 .text {
   color: #fff;
   text-shadow: 0 0 70px #fff, 0 0 0px #fff;
-  font-size: 4vw;
   font-weight: 600;
   margin-top: 10px;
-
+  font-size: 6rem;
 }
 
 .text2 {
   color: #b6b6b6;
   text-shadow: 0 0 70px #e9e9e9, 0 0 0px #fff;
-  font-size: 2vw;
+  font-size: 2em;
   font-weight: 500;
 }
 
@@ -111,25 +100,12 @@ input {
   font-weight: 300;
 }
 
-
-.mb-3 input {
-  border-color: #000;
-  color: #fff;
+@media screen and (max-width: 600px) {
+.text {
+  font-size: 3rem;
 }
 
-@media screen and (max-width: 1400px) {
-  .text {
-    font-size: 5vw;
-  }
-
-  .text2 {
-    font-size: 2vw;
-  }
+.text2 {
+  font-size: 1.3em;
 }
-
-
-@media screen and (max-width: 400px) {
-  .text {
-    font-size: 14vw;
-  }
 }
