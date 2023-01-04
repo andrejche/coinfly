@@ -10,7 +10,7 @@ body {
   background-image:
     radial-gradient(at 100% 100%, hsla(240, 100%, 18%, 0.5) 0px, transparent 50%),
     radial-gradient(at 0% 0%, hsla(343, 0%, 0%, 0.5) 0px, transparent 50%);
-  height: 100vh;
+  height: 100%;
 }
 
 
@@ -51,6 +51,17 @@ body {
   color: #FFF;
 }
 
+.btn:hover {
+  text-decoration: none;
+  padding: 20px 50px;
+  font-size: 1.25rem;
+  position: relative;
+  margin: 32px;
+  border: 3px solid #FFF;
+  color: #FFF;
+}
+
+
 input {
   padding: 20px 50px;
   font-size: 1.25rem;
@@ -66,12 +77,6 @@ input {
 }
 
 
-.row {
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
 
 
 .text {
@@ -97,6 +102,7 @@ input {
   font-size: 1.7vw;
   font-weight: 300;
 }
+
 .text4 {
   margin-top: 1px;
   color: #FFF;
@@ -105,14 +111,10 @@ input {
   font-weight: 300;
 }
 
-.card {
-  margin-top: 410px;
-  margin-left: 20px;
-}
 
 .mb-3 input {
-    border-color: #000;
-    color: #fff;
+  border-color: #000;
+  color: #fff;
 }
 
 @media screen and (max-width: 1400px) {
@@ -130,9 +132,4 @@ input {
   .text {
     font-size: 14vw;
   }
-}
-@media screen and (max-height: 700px) {
-.card {
-  margin-top: 610px;
-}
 }
