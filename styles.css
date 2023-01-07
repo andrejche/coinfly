@@ -100,12 +100,26 @@ input {
   font-weight: 300;
 }
 
-@media screen and (max-width: 600px) {
-.text {
-  font-size: 3rem;
+.prs {
+  display: flex;
+  text-align: center;
 }
 
-.text2 {
-  font-size: 1.3em;
+.mtt {
+  margin-top: 100px;
 }
+
+.card-pr {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@media screen and (max-width: 600px) {
+  .text {
+    font-size: 3rem;
+  }
+
+  .text2 {
+    font-size: 1.3em;
+  }
 }
