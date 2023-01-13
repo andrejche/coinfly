@@ -29,7 +29,18 @@ $(document).ready(function () {
     $('#card-title-3').append(title3);
     $('#card-text-3').append(body3);
 
-
+    function truncateText(element, numWords) {
+      const text = element.text();
+      const words = text.split(' ');
+      if (words.length > numWords) {
+        element.html(words.slice(0, numWords).join(' ') + '…');
+      }
+    }
+    
+    $('#card-text-1, #card-text-2, #card-text-3').each(function() {
+      truncateText($(this), 20); // Truncate text to 10 words
+    });
+    
 
     var obj = response.Data;
 
@@ -41,18 +52,30 @@ $(document).ready(function () {
       var image = news['imageurl'];
       var body = news['body'];
 
+
       var html = `<div class="col-md-4 col-lg-4 p-3">
                         <div class="card text-bg-dark">
-                            <img src="` + image + `">
                             <div class="card-body">
-                                <h5 class="card-title">` + title + `</h5>
-                                <p class="card-text">` + body + ` </p>
+                                <h5 class="card-title"">` + title + `</h5>
+                                <p class="card-text card-text-4">` + body + ` </p>
                             </div>
                         </div>
                     </div>`;
 
       $('#all-news').append(html);
+      
     });
+
+    function truncateText(element, numWords) {
+      const text = element.text();
+      const words = text.split(' ');
+      if (words.length > numWords) {
+        element.html(words.slice(0, numWords).join(' ') + '…');
+      }
+    }
+    
+    const element = $('.card-text-4');
+    truncateText(element, 20); // Truncate text to 10 words      
 
 
   });
@@ -68,4 +91,5 @@ $(document).ready(function () {
   $.get("https://min-api.cryptocompare.com/data/price?fsym=SOL&tsyms=USD", function (data) {
     $("#sol-price").html(data.USD + " USD");
   });
+
 });
