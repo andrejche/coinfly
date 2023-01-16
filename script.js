@@ -1,4 +1,3 @@
-// A $( document ).ready() block.
 $(document).ready(function () {
 
   var newsapi = {
@@ -9,23 +8,17 @@ $(document).ready(function () {
 
   $.ajax(newsapi).done(function (response) {
     var title1 = response.Data[0]['title'];
-    var image1 = response.Data[0]['imageurl'];
     var body1 = response.Data[0]['body'];
-    $("#image-1").attr("src", image1);
     $('#card-title-1').append(title1);
     $('#card-text-1').append(body1);
 
     var title2 = response.Data[1]['title'];
-    var image2 = response.Data[1]['imageurl'];
     var body2 = response.Data[1]['body'];
-    $("#image-2").attr("src", image2);
     $('#card-title-2').append(title2);
     $('#card-text-2').append(body2);
 
     var title3 = response.Data[2]['title'];
-    var image3 = response.Data[2]['imageurl'];
     var body3 = response.Data[2]['body'];
-    $("#image-3").attr("src", image3);
     $('#card-title-3').append(title3);
     $('#card-text-3').append(body3);
 
@@ -49,7 +42,6 @@ $(document).ready(function () {
     $.each(obj, function (key, news) {
 
       var title = news['title'];
-      var image = news['imageurl'];
       var body = news['body'];
 
 
@@ -75,7 +67,7 @@ $(document).ready(function () {
     }
     
     const element = $('.card-text-4');
-    truncateText(element, 20); // Truncate text to 10 words      
+    truncateText(element, 20); // Truncate text to 20 words      
 
 
   });
@@ -91,5 +83,24 @@ $(document).ready(function () {
   $.get("https://min-api.cryptocompare.com/data/price?fsym=SOL&tsyms=USD", function (data) {
     $("#sol-price").html(data.USD + " USD");
   });
+  
+  const scrollingWrapper = document.querySelector('.scrolling-wrapper');
+  const leftArrow = document.querySelector('.left-arrow');
+  const rightArrow = document.querySelector('.right-arrow');
+  
+  leftArrow.addEventListener('click', () => {
+    scrollingWrapper.scrollTo({
+      left: scrollingWrapper.scrollLeft - 50,
+      behavior: 'smooth'
+    });
+  });
+  
+  rightArrow.addEventListener('click', () => {
+    scrollingWrapper.scrollTo({
+      left: scrollingWrapper.scrollLeft + 50,
+      behavior: 'smooth'
+    });
+  });
+
 
 });
