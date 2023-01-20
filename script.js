@@ -1,1 +1,127 @@
-$(document).ready(function(){$.ajax({url:"https://min-api.cryptocompare.com/data/v2/news/?lang=EN",method:"GET",timeout:0}).done(function(t){var c=t.Data[0].title,e=t.Data[0].body;$("#card-title-1").append(c),$("#card-text-1").append(e);var a=t.Data[1].title,r=t.Data[1].body;$("#card-title-2").append(a),$("#card-text-2").append(r);var p=t.Data[2].title,i=t.Data[2].body;function o(t,c){let e=t.text(),a=e.split(" ");a.length>c&&t.html(a.slice(0,c).join(" ")+"…")}$("#card-title-3").append(p),$("#card-text-3").append(i),$("#card-text-1, #card-text-2, #card-text-3").each(function(){o($(this),20)});var m=t.Data;function o(t,c){let e=t.text(),a=e.split(" ");a.length>c&&t.html(a.slice(0,c).join(" ")+"…")}$.each(m,function(t,c){var e=c.title,a=c.body;$("#all-news").append('<div class="col-md-4 col-lg-4 p-3"><div class="card text-bg-dark"><div class="card-body"><h5 class="card-title"">'+e+'</h5><p class="card-text card-text-4">'+a+"</p></div></div></div>")});let s=$(".card-text-4");o(s,20)}),$.get("https://min-api.cryptocompare.com/data/price?fsym=ETH&tsyms=USD",function(t){$("#eth-price").html("ETH<br>"+t.USD+"$")}),$.get("https://min-api.cryptocompare.com/data/price?fsym=BTC&tsyms=USD",function(t){$("#btc-price").html("BTC<br>"+t.USD+"$")}),$.get("https://min-api.cryptocompare.com/data/price?fsym=LTC&tsyms=USD",function(t){$("#ltc-price").html("LTC<br>"+t.USD+"$")}),$.get("https://min-api.cryptocompare.com/data/price?fsym=SOL&tsyms=USD",function(t){$("#sol-price").html("SOL<br>"+t.USD+"$")}),$.get("https://min-api.cryptocompare.com/data/price?fsym=USDT&tsyms=USD",function(t){$("#usdt-price").html("USDT<br>"+t.USD+"$")}),$.get("https://min-api.cryptocompare.com/data/price?fsym=BNB&tsyms=USD",function(t){$("#bnb-price").html("BNB<br>"+t.USD+"$")}),$.get("https://min-api.cryptocompare.com/data/price?fsym=XRP&tsyms=USD",function(t){$("#xrp-price").html("XRP<br>"+t.USD+"$")}),$.get("https://min-api.cryptocompare.com/data/price?fsym=DOGE&tsyms=USD",function(t){$("#doge-price").html("DOGE<br>"+t.USD+"$")}),$.get("https://min-api.cryptocompare.com/data/price?fsym=XMR&tsyms=USD",function(t){$("#xmr-price").html("XMR<br>"+t.USD+"$")}),$.get("https://min-api.cryptocompare.com/data/price?fsym=BCH&tsyms=USD",function(t){$("#bch-price").html("BCH<br>"+t.USD+"$")}),$.get("https://min-api.cryptocompare.com/data/price?fsym=APE&tsyms=USD",function(t){$("#ape-price").html("APE<br>"+t.USD+"$")}),$.get("https://min-api.cryptocompare.com/data/price?fsym=USDC&tsyms=USD",function(t){$("#usdc-price").html("USDC<br>"+t.USD+"$")});let t=document.querySelector(".scrolling-wrapper"),c=document.querySelector(".left-arrow"),e=document.querySelector(".right-arrow");c.addEventListener("click",()=>{t.scrollTo({left:t.scrollLeft-150,behavior:"smooth"})}),e.addEventListener("click",()=>{t.scrollTo({left:t.scrollLeft+150,behavior:"smooth"})})});
+$(document).ready(function () {
+
+  var newsapi = {
+    "url": "https://min-api.cryptocompare.com/data/v2/news/?lang=EN",
+    "method": "GET",
+    "timeout": 0,
+  };
+
+  $.ajax(newsapi).done(function (response) {
+    var title1 = response.Data[0]['title'];
+    var body1 = response.Data[0]['body'];
+    $('#card-title-1').append(title1);
+    $('#card-text-1').append(body1);
+
+    var title2 = response.Data[1]['title'];
+    var body2 = response.Data[1]['body'];
+    $('#card-title-2').append(title2);
+    $('#card-text-2').append(body2);
+
+    var title3 = response.Data[2]['title'];
+    var body3 = response.Data[2]['body'];
+    $('#card-title-3').append(title3);
+    $('#card-text-3').append(body3);
+
+    function truncateText(element, numWords) {
+      const text = element.text();
+      const words = text.split(' ');
+      if (words.length > numWords) {
+        element.html(words.slice(0, numWords).join(' ') + '…');
+      }
+    }
+    
+    $('#card-text-1, #card-text-2, #card-text-3').each(function() {
+      truncateText($(this), 20); // Truncate text to 10 words
+    });
+    
+
+    var obj = response.Data;
+
+
+
+    $.each(obj, function (key, news) {
+
+      var title = news['title'];
+      var body = news['body'];
+
+
+      var html = `<div class="col-md-4 col-lg-4 p-3"><div class="card text-bg-dark"><div class="card-body"><h5 class="card-title"">`+title+`</h5><p class="card-text card-text-4">`+body+`</p></div></div></div>`;
+
+      $('#all-news').append(html);
+      
+    });
+
+    function truncateText(element, numWords) {
+      const text = element.text();
+      const words = text.split(' ');
+      if (words.length > numWords) {
+        element.html(words.slice(0, numWords).join(' ') + '…');
+      }
+    }
+    
+    const element = $('.card-text-4');
+    truncateText(element, 20); // Truncate text to 20 words      
+
+
+  });
+
+  $.get("https://min-api.cryptocompare.com/data/price?fsym=ETH&tsyms=USD", function (data) {
+    $("#eth-price").html("ETH<br>" + data.USD + "$");
+  });
+
+  $.get("https://min-api.cryptocompare.com/data/price?fsym=BTC&tsyms=USD", function (data) {
+    $("#btc-price").html("BTC<br>" + data.USD + "$");
+  });
+
+  $.get("https://min-api.cryptocompare.com/data/price?fsym=LTC&tsyms=USD", function (data) {
+    $("#ltc-price").html("LTC<br>" + data.USD + "$");
+  });
+
+  $.get("https://min-api.cryptocompare.com/data/price?fsym=SOL&tsyms=USD", function (data) {
+    $("#sol-price").html("SOL<br>" + data.USD + "$");
+  });
+  $.get("https://min-api.cryptocompare.com/data/price?fsym=USDT&tsyms=USD", function (data) {
+    $("#usdt-price").html("USDT<br>" + data.USD + "$");
+  });
+  $.get("https://min-api.cryptocompare.com/data/price?fsym=BNB&tsyms=USD", function (data) {
+    $("#bnb-price").html("BNB<br>" + data.USD + "$");
+  });
+  $.get("https://min-api.cryptocompare.com/data/price?fsym=XRP&tsyms=USD", function (data) {
+    $("#xrp-price").html("XRP<br>" + data.USD + "$");
+  });
+  $.get("https://min-api.cryptocompare.com/data/price?fsym=DOGE&tsyms=USD", function (data) {
+    $("#doge-price").html("DOGE<br>" + data.USD + "$");
+  });
+  $.get("https://min-api.cryptocompare.com/data/price?fsym=XMR&tsyms=USD", function (data) {
+    $("#xmr-price").html("XMR<br>" + data.USD + "$");
+  });
+  $.get("https://min-api.cryptocompare.com/data/price?fsym=BCH&tsyms=USD", function (data) {
+    $("#bch-price").html("BCH<br>" + data.USD + "$");
+  });
+  $.get("https://min-api.cryptocompare.com/data/price?fsym=APE&tsyms=USD", function (data) {
+    $("#ape-price").html("APE<br>" + data.USD + "$");
+  });
+  $.get("https://min-api.cryptocompare.com/data/price?fsym=USDC&tsyms=USD", function (data) {
+    $("#usdc-price").html("USDC<br>" + data.USD + "$");
+  });
+
+  const scrollingWrapper = document.querySelector('.scrolling-wrapper');
+  const leftArrow = document.querySelector('.left-arrow');
+  const rightArrow = document.querySelector('.right-arrow');
+  
+  leftArrow.addEventListener('click', () => {
+    scrollingWrapper.scrollTo({
+      left: scrollingWrapper.scrollLeft - 150,
+      behavior: 'smooth'
+    });
+  });
+  
+  rightArrow.addEventListener('click', () => {
+    scrollingWrapper.scrollTo({
+      left: scrollingWrapper.scrollLeft + 150,
+      behavior: 'smooth'
+    });
+  });
+
+
+});
