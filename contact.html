@@ -8,7 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles.css">
   <link rel="icon" href="logo2.png">
-  <title>Marketfly</title>
+  <title>CoinFly</title>
 
 </head>
 
@@ -16,7 +16,7 @@
 
   <nav class="navbar navbar-expand-lg" id="nav-transparent">
     <div class="container-fluid">
-      <a class="navbar-brand" href="index.html">Marketfly</a>
+      <a class="navbar-brand" href="index.html">CoinFly</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon">
@@ -43,39 +43,15 @@
       </div>
     </div>
   </nav>
-  <div class="main">
-    <center>
-
-      <p class="text text-center">Marketfly</p>
-      <script id="qs-embed-63b5fd8deca46a1f61ea2e7f">
-        (function (p) {
-          var s = window.document.createElement('script');
-          s.src = p.a;
-          s.setAttribute('data-form-id', p.b);
-          s.setAttribute('data-url-params', p.c);
-          s.setAttribute('data-runner-id', p.d);
-          s.setAttribute('data-css', p.e);
-          s.setAttribute('data-dimensions', p.f);
-          window.document.head.appendChild(s);
-        })({
-          "a": "https://form.questionscout.com/qs-form-script.min.js",
-          "b": "63b5fcd31729ac4ea4ac2d92",
-          "c": "[]",
-          "d": "qs-embed-63b5fd8deca46a1f61ea2e7f",
-          "e": "",
-          "f": "[\"90%\",\"400px\"]"
-        })
-      </script>
-
-
-  </div>
-  </div>
-  </div>
-  </div>
-  </center>
-  </div>
-
-  </div>
+  <form action="submit-form.php" method="post">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name"><br><br>
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email"><br><br>
+    <label for="message">Message:</label>
+    <textarea id="message" name="message"></textarea><br><br>
+    <input type="submit" value="Submit">
+  </form>
 </body>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
