@@ -30,6 +30,10 @@ $(document).ready(function () {
       }
     }
     
+    $('#card-title-1, #card-title-2, #card-title-3').each(function() {
+      truncateText($(this), 10); // Truncate text to 10 words
+    });
+
     $('#card-text-1, #card-text-2, #card-text-3').each(function() {
       truncateText($(this), 20); // Truncate text to 10 words
     });

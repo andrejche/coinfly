@@ -5,25 +5,38 @@
   --sonic-silver: #747578ff;
   --alice-blue: #e8f0ffff;
   --dark-khaki: #cacf85ff;
-  --black: #000000ff;
+  --black: #010109;
 }
 
 body {
   font-family: 'Raleway', sans-serif;
-  background-color: var(--black);
+  background-color: #010109;
+  background-image: url("bbblurry(1).svg");
+  background-repeat: no-repeat;
 }
 
+.navbar-brand h1{
+  margin-left: 5px;
+  margin-top: 5px;
+  font-size: 25px;
+  font-weight: 900;
+  color: #fff;
+}
 
 #nav-transparent {
-  background-color: #181818;
-  border-bottom: 1px solid #888;
+  background-color: transparent;
+  border-bottom: 1px solid #5050506c;
+  backdrop-filter: blur(5px);
 }
 
 #nav-transparent a {
-  color: #eaeaea;
+  color: #FFF;
   font-weight: 700;
   filter: none;
   font-size: 20px;
+  padding-right: 15px;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 .navbar-toggler .line {
@@ -35,23 +48,18 @@ body {
   margin-bottom: 6px;
 }
 
-nav input[type="text"] {
-  background-color: #000;
-  color: white;
-  border-radius: 20px; /* this will make the edges rounded */
-  border: #FFF solid 2px;
-  width: 200px; /* this will increase the width of the input field */
-  height: 40px; /* this will increase the height of the input field */
-  padding: 10px; /* this will increase the space inside the input field */
-  margin-left: 30px;
-}
 nav button[type="submit"] {
-  background-color: #FFFFFF;
+  background-color: #FFF;
+  border: 1px solid #fff;
+  font-weight: 700;
   color: #000;
   border-radius: 20px; /* this will make the edges rounded */
   width: 80px; /* this will increase the width of the button */
   height: 40px; /* this will increase the height of the button */
   margin-left: 10px;
+  margin-right: 15px;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 nav form {
@@ -69,25 +77,31 @@ nav input[type="text"], nav button[type="submit"] {
 }
 
 .scrolling-wrapper {
-  margin-top: 50px;
-  width: 100%;
+  margin-top: 20px;
   overflow-x: hidden;
   white-space: nowrap;
   display: flex;
   flex-wrap: nowrap;
   scroll-behavior: smooth;
+  padding-top: 15px;
+  border-top: 1px solid #5050506c;
+  border-bottom: 1px solid #5050506c;
+  padding-bottom: 15px;
 }
 
 .cart {
   display: flex;
-  scroll-snap-align: start;
-  width: auto; /* width of each card */
   margin-right: 10px; /* space between cards */
-  background-color: #202020;
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  width: 500px;
+  height: 100px;
   color: #fff;
   padding: 20px;
   text-align: center;
-  border-radius: 5px;
 }
 
 .cart h2 {
@@ -133,15 +147,13 @@ nav input[type="text"], nav button[type="submit"] {
   margin-top: 80px;
   margin-bottom: 100px;
   height: 400px;
-  width: 60%;
-  background-color:hsla(256,100%,46%,1);
-  background-image:
-  radial-gradient(at 92% 30%, hsla(229,69%,63%,1) 0px, transparent 50%),
-  radial-gradient(at 89% 18%, hsla(359,100%,50%,0.49) 0px, transparent 50%),
-  radial-gradient(at 15% 90%, hsla(240,62%,75%,1) 0px, transparent 50%),
-  radial-gradient(at 74% 83%, hsla(16,61%,74%,0.48) 0px, transparent 50%),
-  radial-gradient(at 27% 14%, hsla(314,66%,79%,0.65) 0px, transparent 50%);
-  border-radius: 40px;
+  width: 55%;
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50px;
 }
 
 
@@ -187,6 +199,23 @@ nav input[type="text"], nav button[type="submit"] {
   font-weight: 700;
   font-size: 60px;
 }
+
+.mar {
+  margin-top: 100px;
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #fff;
+  font-weight: 600;
+  height: 180px;
+  margin-bottom: 40px;
+}
+
 
 @media screen and (max-width: 1000px) {
   nav input[type="text"] {
