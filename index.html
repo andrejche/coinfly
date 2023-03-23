@@ -1,1 +1,151 @@
-<!DOCTYPE html><html><head> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous"> <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/> <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script> <link rel="stylesheet" href="styles.css"> <link rel="icon" href="logo.png"> <title>CoinFly</title></head><center> <nav class="navbar navbar-expand-lg sticky-top" id="nav-transparent"> <div class="container-fluid"> <a class="navbar-brand brand" href=""> <h1>COINFLY</h1> </a> <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"> <span class="line"></span> <span class="line"></span> <span class="line"></span> </span> </button> <div class="collapse navbar-collapse" id="navbarNav"> <ul class="navbar-nav"> <li class="nav-item"> <a class="nav-link" href="index.html">Home</a> </li><li class="nav-item"> <a class="nav-link" href="allnews.html">News</a> </li><li class="nav-item"> <a class="nav-link" disabled>Contact</a> </li><li class="nav-item"> <a class="nav-link" disabled>Crypto Prices</a> </li><li class="nav-item"> <a class="nav-link" disabled>API</a> </li></ul> </div></div></nav> <div class="main"> <div class="block"> <h6 class="main-text text-center">CoinFly</h6> <h6 class="alt-text">Stay up-to-date with the latest cryptocurrency trends and market prices, <br>a website that provides real-time price tracking and breaking news. <br>Whether you're a professional trader or new to the world of cryptocurrencies, <br>our website is the ultimate resource for staying on top of things.</h6> </div><h1 class="cp-rcn">Crypto Prices</h1> <div class="scrolling-wrapper slider pricess"> <div class="price-block"><img src="crypto-icons/btc.svg" alt="image"> <h2 id="btc-price"></h2> </div><div class="price-block"><img src="crypto-icons/eth.svg" alt="image"> <h2 id="eth-price"></h2> </div><div class="price-block"><img src="crypto-icons/ltc.svg" alt="image"> <h2 id="ltc-price"></h2> </div><div class="price-block"><img src="crypto-icons/sol.svg" alt="image"> <h2 id="sol-price"></h2> </div><div class="price-block"><img src="crypto-icons/usdt.svg" alt="image"> <h2 id="usdt-price"></h2> </div><div class="price-block"><img src="crypto-icons/bnb.svg" alt="image"> <h2 id="bnb-price"></h2> </div><div class="price-block"><img src="crypto-icons/xrp.svg" alt="image"> <h2 id="xrp-price"></h2> </div><div class="price-block"><img src="crypto-icons/doge.svg" alt="image"> <h2 id="doge-price"></h2> </div><div class="price-block"><img src="crypto-icons/bch.svg" alt="image"> <h2 id="bch-price"></h2> </div><div class="price-block"><img src="crypto-icons/xmr.svg" alt="image"> <h2 id="xmr-price"></h2> </div><div class="price-block"><img src="crypto-icons/ape.svg" alt="image"> <h2 id="ape-price"></h2> </div><div class="price-block"><img src="crypto-icons/usdc.svg" alt="image"> <h2 id="usdc-price"></h2> </div></div><div class="arrows"> <button class="left-arrow"><img id="svg-icon" src="left.svg"></button> <button class="right-arrow"><img id="svg-icon" src="right.svg"/></button> </div><div class="mt"></div><h1 class="cp-rcn">Recent Crypto News</h1> <div class="container"> <div class="row"> <div class="col-md-4 col-lg-4 p-3"> <div class="card transp"> <div class="card-body"> <h5 class="card-title" id="card-title-1"></h5> <p class="card-text" id="card-text-1"> </p></div></div></div><div class="col-md-4 col-lg-4 p-3"> <div class="card transp"> <div class="card-body"> <h5 class="card-title" id="card-title-2"></h5> <p class="card-text" id="card-text-2"></p></div></div></div><div class="col-md-4 col-lg-4 p-3"> <div class="card transp"> <div class="card-body"> <h5 class="card-title" id="card-title-3"></h5> <p class="card-text" id="card-text-3"></p></div></div></div><div class="col-md-12"> <a class="btn" href="allnews.html">View More</a> </div></div></div><div class="mb-5"></div></center></body><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"> </script><script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script><script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script><script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script><script src="script.js"></script></html>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="logo.png">
+    <title>CoinFly</title>
+  </head>
+  <center>
+    <nav class="navbar navbar-expand-lg sticky-top" id="nav-transparent">
+      <div class="container-fluid">
+        <a class="navbar-brand brand" href="">
+          <h1>COINFLY</h1>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+          </span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="allnews.html">News</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" disabled>Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" disabled>Crypto Prices</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" disabled>API</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="main">
+      <div class="block">
+        <h6 class="main-text text-center">CoinFly</h6>
+        <h6 class="alt-text">Stay up-to-date with the latest cryptocurrency trends and market prices, <br>a website that provides real-time price tracking and breaking news. <br>Whether you're a professional trader or new to the world of cryptocurrencies, <br>our website is the ultimate resource for staying on top of things. </h6>
+      </div>
+      <h1 class="cp-rcn">Crypto Prices</h1>
+      <div class="scrolling-wrapper slider pricess">
+        <div class="price-block">
+          <img src="crypto-icons/btc.svg" alt="image">
+          <h2 id="btc-price"></h2>
+        </div>
+        <div class="price-block">
+          <img src="crypto-icons/eth.svg" alt="image">
+          <h2 id="eth-price"></h2>
+        </div>
+        <div class="price-block">
+          <img src="crypto-icons/ltc.svg" alt="image">
+          <h2 id="ltc-price"></h2>
+        </div>
+        <div class="price-block">
+          <img src="crypto-icons/sol.svg" alt="image">
+          <h2 id="sol-price"></h2>
+        </div>
+        <div class="price-block">
+          <img src="crypto-icons/usdt.svg" alt="image">
+          <h2 id="usdt-price"></h2>
+        </div>
+        <div class="price-block">
+          <img src="crypto-icons/bnb.svg" alt="image">
+          <h2 id="bnb-price"></h2>
+        </div>
+        <div class="price-block">
+          <img src="crypto-icons/xrp.svg" alt="image">
+          <h2 id="xrp-price"></h2>
+        </div>
+        <div class="price-block">
+          <img src="crypto-icons/doge.svg" alt="image">
+          <h2 id="doge-price"></h2>
+        </div>
+        <div class="price-block">
+          <img src="crypto-icons/bch.svg" alt="image">
+          <h2 id="bch-price"></h2>
+        </div>
+        <div class="price-block">
+          <img src="crypto-icons/xmr.svg" alt="image">
+          <h2 id="xmr-price"></h2>
+        </div>
+        <div class="price-block">
+          <img src="crypto-icons/ape.svg" alt="image">
+          <h2 id="ape-price"></h2>
+        </div>
+        <div class="price-block">
+          <img src="crypto-icons/usdc.svg" alt="image">
+          <h2 id="usdc-price"></h2>
+        </div>
+      </div>
+      <div class="arrows">
+        <button class="left-arrow">
+          <img id="svg-icon" src="left.svg">
+        </button>
+        <button class="right-arrow">
+          <img id="svg-icon" src="right.svg" />
+        </button>
+      </div>
+      <div class="mt"></div>
+      <h1 class="cp-rcn">Recent Crypto News</h1>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 col-lg-4 p-3">
+            <div class="card transp">
+              <div class="card-body">
+                <h5 class="card-title" id="card-title-1"></h5>
+                <p class="card-text" id="card-text-1"></p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-lg-4 p-3">
+            <div class="card transp">
+              <div class="card-body">
+                <h5 class="card-title" id="card-title-2"></h5>
+                <p class="card-text" id="card-text-2"></p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-lg-4 p-3">
+            <div class="card transp">
+              <div class="card-body">
+                <h5 class="card-title" id="card-title-3"></h5>
+                <p class="card-text" id="card-text-3"></p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <a class="btn" href="allnews.html">View More</a>
+          </div>
+        </div>
+      </div>
+      <div class="mb-5"></div>
+  </center>
+  </body>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <script src="script.js"></script>
+</html>
